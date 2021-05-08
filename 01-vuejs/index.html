@@ -2,17 +2,26 @@
 <html lang="es">
 
 <head>
-    <title>Ejemplo MONGODB</title>
-    <script src="https://unpkg.com/vue@next"></script>
+    <title>Ejemplo VueJS</title>
 
-    <script src="js/app.js" defer></script>
+
 </head>
 
 <body>
 
-    <div id="contador">
-        Contador: {{ contador }}
+
+    <div id="app">
+
+        <p>Contador: {{ contador }}</p>
+        <h1>Tiempo limite: {{ tiempoLimite }}</h1>
+
+        <p v-if="tiempo()">Tiempo finalizado</p>
+
     </div>
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/app.js"></script>
 
 </body>
 

@@ -1,17 +1,28 @@
-"use strict";
-
-const Contador = {
+const app = Vue.createApp({
     data() {
-        return {
-            contador: 0
+        return { 
+            contador: 0,
+            tiempoLimite: 5,
+            timer: {}
         }
     },
     mounted() {
-        setInterval(() => {
+        this.timer = setInterval(() => {
             this.contador++;
-        }, 1000);
+        }, 1000)
+    },
+    methods: {
+        tiempo() {
+            if(this.contador == 5) {
+                clearInterval(this.timer);
+                return true;
+            }
+        }
     }
-}
+});
 
-Vue.createApp(Contador).mount("#contador");
+const vm = app.mount('#app');
+
+
+
 
