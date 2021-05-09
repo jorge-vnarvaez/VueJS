@@ -5,9 +5,13 @@ const app = Vue.createApp({
                 'Perro',
                 'Gato',
                 'Caballo',
-                'Cebra',
-                'Cerdo'
+                
             ]
+        }
+    },
+    computed: {
+        cuatroOMas() {
+            return this.animales.length > 4 ? 'Si' : 'No'; 
         }
     }
 });
