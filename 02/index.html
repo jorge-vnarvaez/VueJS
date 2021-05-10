@@ -12,12 +12,10 @@
 
         <h1>Animales</h1>
 
-        <ul v-for='animal in animales'>
-            <li>{{ animal }}</li>
-        </ul>
+        <p>Escriba el nombre de un animal</p>
+        <input type="text" v-model='nombre' />{{ nombre }}
 
-        <p>¿Hay 4 animales o más? {{ cuatroOMas }}</p>
-
+     
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
