@@ -3,6 +3,7 @@
     <h2 class="label-wrapper">
       <label for="nuevo-item" class="label__lg">¿Tienes algo por hacer?</label>
     </h2>
+    
     <input
       type="text"
       id="nuevo-item"
