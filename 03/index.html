@@ -9,6 +9,20 @@
     <script src="https://unpkg.com/vue@next"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/app.js" defer></script>
+    <style>
+
+        button {
+            padding: 5px 6px;
+            background-color: lightseagreen;
+            color: white;
+        }
+
+        img {
+            width: 240px;
+            height: 230px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -16,6 +30,8 @@
     <div id="planilla-section">
 
         <img v-bind:src="gato.url" />
+        <br/>
+        <button @click='siguiente'>Siguiente imagen</button>
 
     </div>
 

@@ -6,16 +6,21 @@ const planilla = Vue.createApp({
             }
         }
     },
-    created: function () {
-        axios({
-            method: 'get',
-            url: 'https://aws.random.cat/meow',
-            responseType: 'json'
-        })
-            .then(response => {
-                const randomUrl = response.data;
-                this.gato.url = randomUrl.file;
-            });
+    methods: {
+        siguiente() {
+            axios({
+                method: 'get',
+                url: 'https://aws.random.cat/meow',
+                responseType: 'json'
+            })
+                .then(response => {
+                    const randomUrl = response.data;
+                    this.gato.url = randomUrl.file;
+                });
+        }
+    },
+    created() {
+        this.siguiente();
     }
 });
 
